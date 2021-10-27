@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7F159"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/connection_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="Chat VIA Bluetooth"
+        android:textColor="@color/black"
+        android:elevation="40dp"
+        android:outlineAmbientShadowColor="#64FF41"
+        android:outlineSpotShadowColor="#E8DF0E"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="40dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <ListView
+        android:id="@+id/message_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:elevation="30dp">
+
+    </ListView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:elevation="30dp"
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="#64FF41"
+        android:outlineSpotShadowColor="#E8DF0E">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="#D6FAA4">
+
+            <EditText
+                android:id="@+id/edit_text_text_message"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:background="@null"
+                android:elevation="30dp"
+                android:hint="@string/message_hint"
+                android:inputType="textAutoCorrect|textMultiLine"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btn_photo_attach"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:contentDescription="@string/image_description"
+                android:onClick="PhotoMessage"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:elevation="20dp"
+                android:src="@drawable/ic_attachment" />
+
+            <ImageButton
+                android:id="@+id/btn_photo_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:elevation="20dp"
+                android:contentDescription="@string/image_description"
+                android:onClick="CameraPhoto"
+                android:src="@drawable/ic_photo_camera" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            android:background="#5EE102"
+            android:contentDescription="@string/send"
+            android:src="@drawable/ic_run_circle_24"
+            android:text="@string/send"
+            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_marginRight="4dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
